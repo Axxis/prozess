@@ -3,12 +3,11 @@
 <html>
 <head>
 	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="resources/js/lib/extjs/resources/ext-theme-classic/ext-theme-classic-all.css" />
+	
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  The time on the server is ${serverTime}. </P>
+<script type="text/javascript" src="resources/js/lib/extjs/ext-all-debug.js"></script>
+<script type="text/javascript" src="resources/js/app.js"></script>
 </body>
 </html>
