@@ -2,15 +2,15 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.prozessbpm</groupId>
-	<artifactId>prozessbpm</artifactId>
+	<groupId>com.jumlabs.jumbpm</groupId>
+	<artifactId>jumbpm</artifactId>
 	<packaging>pom</packaging>
 	<version>1.0</version>
 	<name>BPM Process Modeler</name>
 	<modules>
-		<module>prozessbpm-data</module>
-		<module>prozessbpm-services</module>
-		<module>prozessbpm-view</module>
+		<module>jumbpm-data</module>
+		<module>jumbpm-services</module>
+		<module>jumbpm-view</module>
 	</modules>
 	<properties>
 		<java-version>1.6</java-version>
