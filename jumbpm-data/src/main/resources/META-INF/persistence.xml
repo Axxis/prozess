@@ -5,11 +5,11 @@
              version="1.0">
 
 	<persistence-unit name="application" transaction-type="RESOURCE_LOCAL">
-
-        <class>com.prozessbpm.data.Item</class>
-        <class>com.prozessbpm.data.Order</class>
+        <class>com.jumlabs.jumbpm.data.Item</class>
+        <class>com.jumlabs.jumbpm.data.Order</class>
+        <class>com.jumlabs.jumbpm.data.User</class>
+        <class>com.jumlabs.jumbpm.data.Role</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
-
 	</persistence-unit>
 
 </persistence>
