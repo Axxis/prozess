@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.hibernate.cache.HashtableCacheProvider;
 import org.hibernate.dialect.H2Dialect;
+import org.hibernate.dialect.MySQL5Dialect;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -24,7 +25,7 @@ public class JpaConfiguration {
 	@Bean
 	public Map<String, Object> jpaProperties() {
 		Map<String, Object> props = new HashMap<String, Object>();
-		props.put("hibernate.dialect", H2Dialect.class.getName());
+		props.put("hibernate.dialect", MySQL5Dialect.class.getName());
 		props.put("hibernate.cache.provider_class", HashtableCacheProvider.class.getName());
 		return props;
 	}
@@ -34,7 +35,7 @@ public class JpaConfiguration {
 		HibernateJpaVendorAdapter hibernateJpaVendorAdapter = new HibernateJpaVendorAdapter();
 		hibernateJpaVendorAdapter.setShowSql(false);
 		hibernateJpaVendorAdapter.setGenerateDdl(true);
-		hibernateJpaVendorAdapter.setDatabase(Database.H2);
+		hibernateJpaVendorAdapter.setDatabase(Database.MYSQL);
 		return hibernateJpaVendorAdapter;
 	}
 
