@@ -2,6 +2,7 @@ package com.jumlabs.entities.peopleandorganizations;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
 import java.util.Date;
 
 
@@ -24,6 +25,14 @@ public class PartyRole implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="thru_date")
 	private Date thruDate;
+
+	@OneToOne
+	@JoinColumn(name="party_id",updatable=false,insertable=false)
+	private Person person;
+	
+	public Person getPerson() {
+		return person;
+	}
 
 	public PartyRole() {
 	}

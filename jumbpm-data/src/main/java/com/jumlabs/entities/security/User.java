@@ -1,17 +1,21 @@
 package com.jumlabs.entities.security;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 import javax.persistence.Entity;
 
 import com.jumlabs.entities.peopleandorganizations.PartyRole;
+import com.jumlabs.entities.peopleandorganizations.Person;
 
 @Entity
 @Table(name="user")
 @PrimaryKeyJoinColumn(name="party_role_id")
 public class User extends PartyRole {
+	
 	
 	/**
 	 * 
