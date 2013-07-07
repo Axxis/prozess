@@ -13,11 +13,10 @@ import java.util.Date;
 @Table(name="party_role")
 public class PartyRole implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	
-    @Id
-    private Long id;
-    
+
+	@EmbeddedId
+	private PartyRolePK id;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name="from_date")
 	private Date fromDate;
@@ -26,17 +25,16 @@ public class PartyRole implements Serializable {
 	@Column(name="thru_date")
 	private Date thruDate;
 
-	//bi-directional many-to-one association to Party
-	@ManyToOne
-	private Party party;
-
-	//bi-directional many-to-one association to PartyRoleType
-	@ManyToOne
-	@JoinColumn(name="party_role_type_id")
-	private PartyRoleType partyRoleType;
-
 	public PartyRole() {
-	}	
+	}
+
+	public PartyRolePK getId() {
+		return this.id;
+	}
+
+	public void setId(PartyRolePK id) {
+		this.id = id;
+	}
 
 	public Date getFromDate() {
 		return this.fromDate;
@@ -52,22 +50,6 @@ public class PartyRole implements Serializable {
 
 	public void setThruDate(Date thruDate) {
 		this.thruDate = thruDate;
-	}
-
-	public Party getParty() {
-		return this.party;
-	}
-
-	public void setParty(Party party) {
-		this.party = party;
-	}
-
-	public PartyRoleType getPartyRoleType() {
-		return this.partyRoleType;
-	}
-
-	public void setPartyRoleType(PartyRoleType partyRoleType) {
-		this.partyRoleType = partyRoleType;
 	}
 
 }

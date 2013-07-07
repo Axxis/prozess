@@ -10,26 +10,25 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="role_type")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class RoleType implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private int id;
+	private Long id;
 
 	private String description;
 
-	//bi-directional one-to-one association to PartyRoleType
-	@OneToOne(mappedBy="roleType")
-	private PartyRoleType partyRoleType;
+
 
 	public RoleType() {
 	}
 
-	public int getId() {
+	public Long getId() {
 		return this.id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
@@ -41,12 +40,5 @@ public class RoleType implements Serializable {
 		this.description = description;
 	}
 
-	public PartyRoleType getPartyRoleType() {
-		return this.partyRoleType;
-	}
-
-	public void setPartyRoleType(PartyRoleType partyRoleType) {
-		this.partyRoleType = partyRoleType;
-	}
 
 }

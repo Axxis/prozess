@@ -1,8 +1,6 @@
 package com.jumlabs.entities.peopleandorganizations;
 
-import java.io.Serializable;
 import javax.persistence.*;
-
 import java.util.Date;
 
 

@@ -34,11 +34,7 @@ public class PersonRepositoryTests {
 	@Test
 	@Transactional
 	public void testSaveOrderWithItems() throws Exception {
-		Organization organization=new Organization();
-	    organization.setName("A Fine organization");
-	    organizationRepository.save(organization);
-		List<Organization> organizations=organizationRepository.findAll();
-		assertEquals(organizations.size(),1);
+	
 	}
 //
 //	@Test

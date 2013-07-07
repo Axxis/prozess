@@ -8,13 +8,14 @@
         <class>com.jumlabs.entities.peopleandorganizations.Organization</class>
         <class>com.jumlabs.entities.peopleandorganizations.Party</class>
         <class>com.jumlabs.entities.peopleandorganizations.PartyRelationshipType</class>
-        <class>com.jumlabs.entities.peopleandorganizations.PartyRole</class>
         <class>com.jumlabs.entities.peopleandorganizations.PartyRoleType</class>
         <class>com.jumlabs.entities.peopleandorganizations.PartyType</class>
         <class>com.jumlabs.entities.peopleandorganizations.Person</class>
         <class>com.jumlabs.entities.peopleandorganizations.RoleType</class>
         <class>com.jumlabs.entities.peopleandorganizations.PartyClasification</class>
         <class>com.jumlabs.entities.peopleandorganizations.PartyClasificationPK</class>
+        <class>com.jumlabs.entities.peopleandorganizations.PartyRole</class>
+        <class>com.jumlabs.entities.peopleandorganizations.PartyRolePK</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 	</persistence-unit>
 

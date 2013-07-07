@@ -12,7 +12,6 @@ import javax.persistence.*;
 @Table(name="organization")
 @PrimaryKeyJoinColumn(name="party_id")
 public class Organization extends Party {
-
 	
 	@Column(name="name")
 	private  String name;
