@@ -21,6 +21,7 @@
         <class>com.jumlabs.entities.peopleandorganizations.PartyRelationshipTypePK</class>
         <class>model.PartyRelationship</class>
         <class>model.PartyRelationshipPK</class>
+        <class>com.jumlabs.entities.security.GroupMember</class>
 		<exclude-unlisted-classes>true</exclude-unlisted-classes>
 	</persistence-unit>
 

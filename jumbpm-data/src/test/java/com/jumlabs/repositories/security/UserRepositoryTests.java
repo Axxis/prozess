@@ -1,8 +1,6 @@
 package com.jumlabs.repositories.security;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
 import java.util.Date;
 
 import org.junit.Test;
@@ -11,11 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.jumlabs.entities.peopleandorganizations.Organization;
 import com.jumlabs.entities.peopleandorganizations.PartyClasification;
 import com.jumlabs.entities.peopleandorganizations.PartyClasificationPK;
-import com.jumlabs.entities.peopleandorganizations.PartyRole;
 import com.jumlabs.entities.peopleandorganizations.PartyRolePK;
 import com.jumlabs.entities.peopleandorganizations.PartyRoleType;
 import com.jumlabs.entities.peopleandorganizations.PartyType;
@@ -89,9 +84,7 @@ public class UserRepositoryTests {
 		
 		User savedUser=userRepository.findOne(user.getId());
 		assertEquals("otto.giron",savedUser.getUserName());
-		assertEquals(true,savedUser.isEnabled());
-		assertEquals("Otto", user.getPerson().getFirstName());
-		
+		assertEquals(true,savedUser.isEnabled());				
 	}
 
 }
