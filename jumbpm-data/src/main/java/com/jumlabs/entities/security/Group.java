@@ -13,9 +13,6 @@ import com.jumlabs.entities.peopleandorganizations.PartyRole;
 @PrimaryKeyJoinColumn(name="party_role_id")
 public class Group extends PartyRole {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
 		
 }

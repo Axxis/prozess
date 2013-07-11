@@ -12,6 +12,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name="party_role")
+@Inheritance(strategy=InheritanceType.JOINED)
 public class PartyRole implements Serializable {
 	private static final long serialVersionUID = 1L;
 

@@ -13,26 +13,23 @@ import javax.persistence.*;
 public class PartyRelationshipType implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	@Id	
-	private Long id;
-	
+	@EmbeddedId
+	private PartyRelationshipTypePK id;
+
 	private String description;
 
 	private String name;
 
-	//bi-directional many-to-one association to PartyRoleType
-	@ManyToOne
-	@JoinColumn(name="party_role_type_id_from")
-	private PartyRoleType partyRoleType1;
-
-	//bi-directional many-to-one association to PartyRoleType
-	@ManyToOne
-	@JoinColumn(name="party_role_type_id_to")
-	private PartyRoleType partyRoleType2;
-
 	public PartyRelationshipType() {
 	}
 
+	public PartyRelationshipTypePK getId() {
+		return this.id;
+	}
+
+	public void setId(PartyRelationshipTypePK id) {
+		this.id = id;
+	}
 
 	public String getDescription() {
 		return this.description;
@@ -48,22 +45,6 @@ public class PartyRelationshipType implements Serializable {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public PartyRoleType getPartyRoleType1() {
-		return this.partyRoleType1;
-	}
-
-	public void setPartyRoleType1(PartyRoleType partyRoleType1) {
-		this.partyRoleType1 = partyRoleType1;
-	}
-
-	public PartyRoleType getPartyRoleType2() {
-		return this.partyRoleType2;
-	}
-
-	public void setPartyRoleType2(PartyRoleType partyRoleType2) {
-		this.partyRoleType2 = partyRoleType2;
 	}
 
 }

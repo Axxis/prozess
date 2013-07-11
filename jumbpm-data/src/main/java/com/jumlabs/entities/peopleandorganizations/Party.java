@@ -3,12 +3,7 @@ package com.jumlabs.entities.peopleandorganizations;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-
 import javax.persistence.*;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 
 
